@@ -1,9 +1,30 @@
 @import './variables';
 @import './resets';
 
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+    max-width: 400px;
+}
 
-.todo-box {
-    background: $primary-color;
-    color: $text-color;
-    border: 2px solid black;
+.main {
+    @include flexCenter($direction:column);
+    margin: 0 auto;
+
+}
+
+.main h1 {
+    width: 100%;
+    max-width: 400px;
+}
+
+.main .todo-box {
+    background: $primary-color; /*add to mixin later*/
+    color: $text-color; /*add to mixin later*/
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    border-radius: 8px;
 };
