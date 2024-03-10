@@ -1,12 +1,20 @@
 @import './variables';
 @import './resets';
 
+* {
+font-family: 'Roboto', sans-serif;
+}
+
 @mixin flexCenter($direction) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: $direction;
-    max-width: 400px;
+    max-width: $max-width;
+}
+body {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .main {
@@ -17,7 +25,8 @@
 
 .main h1 {
     width: 100%;
-    max-width: 400px;
+    max-width: $max-width;
+    margin: 0.8rem;
 }
 
 .main .todo-box {
@@ -27,4 +36,10 @@
     height: 50px;
     text-align: left;
     border-radius: 8px;
+    margin: 2px;
+    padding: 15px;
 };
+
+.todo-box.new-box {
+    margin-bottom: 20px;
+}

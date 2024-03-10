@@ -1,7 +1,15 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .main {
@@ -9,13 +17,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
 .main h1 {
   width: 100%;
-  max-width: 400px;
+  max-width: 560px;
+  margin: 0.8rem;
 }
 
 .main .todo-box {
@@ -25,4 +34,10 @@
   height: 50px;
   text-align: left;
   border-radius: 8px;
+  margin: 2px;
+  padding: 15px;
+}
+
+.todo-box.new-box {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=main.css.map */
