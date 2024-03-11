@@ -1,43 +1,55 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
 }
 
 * {
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  padding-left: 8px;
-  padding-right: 8px;
+header {
+  width: 320px;
+  max-width: 320px;
+  text-transform: uppercase;
 }
 
-.main {
+.title {
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  height: 1.5rem;
+  float: right;
+  margin-top: 7px;
+}
+
+.todo-app {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 560px;
-  margin: 0 auto;
+  max-width: 320px;
 }
 
-.main h1 {
-  width: 100%;
-  max-width: 560px;
-  margin: 0.8rem;
-}
-
-.main .todo-box {
+.todo-app .todo-box {
   background: #272727; /*add to mixin later*/
   color: white; /*add to mixin later*/
   width: 100%;
   height: 50px;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 2px;
   padding: 15px;
 }
 
-.todo-box.new-box {
-  margin-bottom: 20px;
+@media (min-width: 570px) {
+  header {
+    width: 560px;
+    max-width: 560px;
+  }
+  .todo-app {
+    width: 560px;
+    max-width: 560px;
+  }
 }/*# sourceMappingURL=main.css.map */

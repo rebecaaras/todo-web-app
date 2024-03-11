@@ -1,45 +1,58 @@
 @import './variables';
 @import './resets';
 
-* {
-font-family: 'Roboto', sans-serif;
-}
-
 @mixin flexCenter($direction) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: $direction;
-    max-width: $max-width;
-}
-body {
-    padding-left: 8px;
-    padding-right: 8px;
 }
 
-.main {
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: $mobile-content-width;
+    max-width: $mobile-content-width ;
+    text-transform: uppercase;
+}
+
+.title {
+    display: inline-block;
+}
+
+.logo {
+    display: inline-block;
+    height: 1.5rem;
+    float: right;
+    margin-top: 7px;
+}
+
+.todo-app {
     @include flexCenter($direction:column);
-    margin: 0 auto;
-
+    max-width: $mobile-content-width
 }
 
-.main h1 {
-    width: 100%;
-    max-width: $max-width;
-    margin: 0.8rem;
-}
-
-.main .todo-box {
+.todo-app .todo-box {
     background: $primary-color; /*add to mixin later*/
     color: $text-color; /*add to mixin later*/
     width: 100%;
     height: 50px;
     text-align: left;
-    border-radius: 8px;
+    border-radius: $border-radius;
     margin: 2px;
     padding: 15px;
 };
 
-.todo-box.new-box {
-    margin-bottom: 20px;
+@media (min-width: 570px){
+    header {
+        width: $desktop-content-width;
+        max-width: $desktop-content-width;
+    }
+    
+    .todo-app {
+        width: $desktop-content-width;
+        max-width: $desktop-content-width;
+    }
 }
