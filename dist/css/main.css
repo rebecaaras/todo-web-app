@@ -7,10 +7,32 @@
   font-family: "Roboto", sans-serif;
 }
 
+.background {
+  width: 100%;
+  height: 250px;
+  background-image: url(background-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid red;
+  z-index: -1;
+}
+
+body {
+  background-color: #161722;
+}
+
+/*.background-image {
+    max-width:100%;
+    height: auto;
+}*/
 header {
   width: 320px;
   max-width: 320px;
   text-transform: uppercase;
+  color: white;
+  margin-bottom: 2rem;
+  z-index: 1;
+  margin-top: -180px;
 }
 
 .title {
@@ -30,17 +52,27 @@ header {
   justify-content: center;
   flex-direction: column;
   max-width: 320px;
+  /*border-radius: $border-radius;*/
+  z-index: 1;
 }
 
 .todo-app .todo-box {
-  background: #272727; /*add to mixin later*/
+  background: #25273C; /*add to mixin later*/
   color: white; /*add to mixin later*/
   width: 100%;
   height: 50px;
   text-align: left;
-  border-radius: 5px;
-  margin: 2px;
   padding: 15px;
+  border-bottom: 2px solid #161722;
+}
+
+/*isn't working */
+.new-box {
+  border-bottom: none;
+}
+
+.new-activity-bottom-space {
+  height: 15px;
 }
 
 @media (min-width: 570px) {
