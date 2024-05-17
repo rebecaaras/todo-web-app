@@ -31,3 +31,72 @@
     height: 30px;
     margin-left: 10px;
 }
+
+.row {
+    display: flex;
+    background: #edeef0;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    background-color: #ff5945;
+    color: #fff;
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.row button:hover {
+    font-weight:600;
+    background-color: #f97869;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 8px 12px 50px;
+    position: relative;
+    font-size: 17px;
+    user-select: none;
+}
+
+ul li::before {
+    /*Coloquei este comando (content: '';) por último e ele foi o que fez 
+    finalmente a imagem de fundo aparecer... Pesquisar o motivo.*/
+    content: '';
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    margin-right: 10px;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked::before {
+    background-image: url("images/checked.png");
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
