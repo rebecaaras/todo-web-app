@@ -4,3 +4,30 @@
     font-family: 'Open Sans';
     box-sizing: border-box;
 }
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d7e5f0, #247bce);
+    padding: 10px;
+}
+
+.todo-app {
+    background: #fff;
+    width: 540px;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #2a2a2a;
+}
+
+.todo-app h2 img{
+    height: 30px;
+    margin-left: 10px;
+}
