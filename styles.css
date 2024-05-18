@@ -71,7 +71,7 @@ ul li {
     align-items: center;
     list-style: none;
     cursor: pointer;
-    padding: 14px 8px 12px 50px;
+    padding: 12px 8px 12px 50px;
     position: relative;
     font-size: 17px;
     user-select: none;
@@ -99,4 +99,23 @@ ul li.checked::before {
 ul li.checked {
     text-decoration: line-through;
     color: #555;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width:40px;
+    height:40px;
+    font-size: 22px;
+    color:#555;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    
+}
+
+ul li span:hover {
+    background: #edeef0;
+    color: black;
 }
